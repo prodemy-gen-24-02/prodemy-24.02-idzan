@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #656464;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+button {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 255, 0.8);
+}
+
+.icon-navbar {
+  list-style: none;
+}
+
+.icon-navbar li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.icon-navbar li i {
+  transition: all 0.3s ease 0s;
+}
+
+.icon-navbar li i:hover {
+  color: #0088a9;
+}
+
+/* Bagian hero  */
+.hero {
+  background-image: url("asset/bakcgroundhero.svg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: "Roboto";
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-family: "Nunito Sans";
+}
+
+.hero a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero a.button:hover {
+  background-color: #0056b3;
+}
+
+.section-margin {
+  margin: 0 40px;
+  padding: 20px 10%;
+}
+
+/* Bagian kategori */
+
+.browse-by-category {
+  float: left;
+  padding: 20px 40px;
+}
+
+.browse-by-category h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+}
+
+.navigation-buttons {
+  float: right;
+  padding: 20px 40px;
+}
+
+.navigation-buttons button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button i {
+  font-size: 18px;
+  background-color: transparent;
+  margin-right: 5px;
+}
+
+.navigation-buttons button:hover {
+  color: #ffffff;
+}
+
+.navigation-buttons button {
+  border-radius: 0;
+}
+
+.section-category-container {
+  margin: 20px auto;
+}
+
+.category-container {
+  clear: both;
+  text-align: center;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.category-box {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.category-box p {
+  font-family: "Nunito Sans";
+}
+
+.category-box img {
+  max-width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Bagian featured products */
+
+.featured-products {
+  padding: 40px;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.products-header h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+}
+
+.view-all {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: "Nunito Sans";
+}
+
+.rating {
+  color: #f8b700;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-actions {
+  margin-top: 20px;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.icon img {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
