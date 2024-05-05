@@ -65,7 +65,7 @@ button:hover {
 
 .icon-navbar li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .icon-navbar li i {
@@ -177,9 +177,8 @@ button:hover {
 .category-container {
   clear: both;
   text-align: center;
-  overflow-x: auto;
+
   padding: 20px 0;
-  scroll-behavior: smooth;
 }
 
 .category-box {
@@ -249,6 +248,12 @@ button:hover {
 .product-info h3 {
   font-size: 18px;
   margin-top: 10px;
+  font-family: "Nunito Sans";
+}
+
+.product-info p {
+  font-size: 16px;
+
   font-family: "Nunito Sans";
 }
 
