@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Belanja Aja</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="asset/logowebtugas.svg" alt="logo" />
+      <nav>
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" class="open-sidebar-button"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
+
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-button"
+            ><i class="fa-solid fa-x" style="color: aliceblue"></i
+          ></label>
+
+          <a href="#hero-section">Home</a>
+          <a href="#category-section">Category</a>
+          <a href="">About Us</a>
+          <a href="">Contact</a>
+          <!-- <div class="icon-navbar"> -->
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-user"></i>
+          <!-- </div> -->
+        </div>
+      </nav>
+    </header>
+    <section class="hero" id="hero-section" style="margin-bottom: 2em">
+      <div class="hero-content">
+        <h1>
+          Belanja kapan saja <br />
+          di mana saja
+        </h1>
+        <img
+          src="https://i.pinimg.com/474x/b9/38/57/b938577d9ef94d58e990daaf520f576a.jpg"
+          alt=""
+        />
+        <p>Temukan produk impian anda di website ini</p>
+        <a href="#" class="button">Belanja Sekarang</a>
+      </div>
+      <div></div>
+    </section>
+    <!-- untuk menambah margin horizontal bagian section hero kebawah -->
+    <div class="section-margin">
+      <!-- bagian section kategori -->
+      <section id="category-section" class="section-category-container">
+        <!-- bagian kategori header -->
+        <div class="category-header">
+          <h2>Browse by Category</h2>
+          <div class="navigation-buttons">
+            <button>
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <!-- bagian body kategori -->
+        <div class="category-container">
+          <div class="category-box">
+            <img src="asset/icon/icon-computer.png" alt="Komputer" />
+            <p>Komputer</p>
+          </div>
+          <div class="category-box">
+            <img src="asset/icon/icon-smartphone.png" alt="Smartphone" />
+            <p>Smartphone</p>
+          </div>
+          <div class="category-box">
+            <img src="asset/icon/icon-camera.png" alt="Kamera" />
+            <p>Kamera</p>
+          </div>
+          <div class="category-box">
+            <img src="asset/icon/icon-watch.png" alt="Smart watch" />
+            <p>Smart watch</p>
+          </div>
+          <div class="category-box">
+            <img src="asset/icon/icon-game.png" alt="Game console" />
+            <p>Video games</p>
+          </div>
+          <div class="category-box">
+            <img src="asset/icon/icon-sports.png" alt="Alat olahraga" />
+            <p>Olahraga</p>
+          </div>
+        </div>
+      </section>
+      <!-- bagian section featured products-->
+      <section class="featured-products">
+        <div class="products-header">
+          <h2>Featured Products</h2>
+          <button class="view-all">View All Products &nbsp;→</button>
+        </div>
+        <div class="product-grid">
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk1.jpg" alt="Laptop Vivobook 14x" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Vivobook 14X (M1403)</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+              </div>
+              <p class="price">Rp. 7.999.000</p>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk2.jpg" alt="PS 5" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>PlayStation 5 (PS 5)</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+              <p class="price">Rp. 8.999.000</p>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk3.jpg" alt="Hp Infinix Note 40" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 style="font-size: 1em">Infinix Note 40 Pro 5G 8+256GB</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+              </div>
+              <p class="price">Rp. 3.700.000</p>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk4.jpg" alt="Nintendo Switch" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Nintendo Switch</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+              </div>
+              <p class="price">Rp. 5.000.000</p>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk5.jpg" alt="Dumbell flexsibel" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Adjustable Dumbbell Set</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+              </div>
+              <p class="price">Rp. 7.800.000</p>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-box">
+              <img src="asset/produk/produk6.jpg" alt="Smart watch v2" />
+              <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <i class="fa-regular fa-eye"></i>
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3>Smart Watch v2</h3>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+              </div>
+              <p class="price">Rp. 900.000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- bagian footer -->
+    <footer class="footer">
+      <div class="footer-column" style="margin-left: 20px">
+        <div class="footer-logo" style="background-color: transparent">
+          <img
+            src="asset/logowebtugas.svg"
+            alt="Logo"
+            style="background-color: transparent"
+          />
+        </div>
+        <div class="social-icons" style="background-color: transparent">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <div class="copyright" style="background-color: transparent">
+          &copy; 2024 Belanja aja
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Get to Know Us</h4>
+        <ul class="list-footer">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">News & Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Orders & Return</h4>
+        <ul class="list-footer">
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Return & Exchange</a></li>
+          <li><a href="#">Track Order</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul class="list-footer">
+          <li><i class="fas fa-phone"></i> +62 123456789</li>
+          <li><i class="fas fa-envelope"></i> belanja@aja.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Jalan buntu</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
