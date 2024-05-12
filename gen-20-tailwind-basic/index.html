@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Detail Produk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-white shadow-md p-4 fixed top-0 left-0 w-full z-10">
+      <div class="flex items-center justify-around">
+        <img class="h-10 w-auto" src="asset/logowebtugas.svg" alt="logo" />
+
+        <nav class="block font-[Roboto]">
+          <a href="#" class="text-gray-800 hover:text-indigo-600 mr-4">Home</a>
+          <a href="#" class="text-gray-800 hover:text-indigo-600 mr-4"
+            >Category</a
+          >
+          <a href="#" class="text-gray-800 hover:text-indigo-600 mr-4"
+            >About Us</a
+          >
+          <a href="#" class="text-red hover:text-indigo-600">Contact</a>
+        </nav>
+
+        <div class="block items-center space-x-4">
+          <i class="fas fa-search"></i>
+          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-user"></i>
+        </div>
+      </div>
+    </header>
+    <main class="mt-16">
+      <!-- Detail Produk Section -->
+      <section class="my-8 mx-auto max-w-6xl p-6 shadow">
+        <div class="grid grid-cols-2 gap-8 items-center">
+          <!-- Gambar Utama Produk (di kiri) -->
+          <div>
+            <img
+              class="w-full mb-4"
+              src="asset/produk/produk2.jpg"
+              alt="Gambar ps5 utama"
+            />
+            <!-- Tiga Gambar Kecil (di bawah gambar utama) -->
+            <div class="col-span-1 grid grid-cols-3 gap-4 mt-8">
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.1.jpg"
+                alt="Gambar ps5 kecil 1"
+              />
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.2.jpg"
+                alt="Gambar ps5 kecil 2"
+              />
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.3.jpg"
+                alt="Gambar ps5 kecil 3"
+              />
+            </div>
+          </div>
+
+          <!-- Detail Teks Produk (di kanan) -->
+          <div class="h-full flex flex-col justify-between">
+            <h2 class="text-xl font-bold mb-4 font-[Oswald]">
+              Produk Elektronik
+            </h2>
+            <div>
+              <h3 class="text-xl font-bold mb-4 font-[Oswald]">
+                Playstation 5
+              </h3>
+              <h4 class="text-m font-bold mb-4 font-[Oswald]">Detail :</h4>
+              <p class="text-gray-700 text-sm mb-4 font-[Roboto]">
+                PS5 adalah konsol game generasi terbaru yang menawarkan
+                pengalaman gaming terdepan. Dibuat oleh Sony, PS5 memiliki
+                kekuatan grafis dan performa yang luar biasa, menjadikannya
+                pilihan utama para gamer. Dilengkapi dengan teknologi canggih
+                seperti ray tracing dan SSD ultra cepat, PS5 menghadirkan
+                gameplay yang halus dan realistis. Kontroler DualSense yang
+                inovatif memberikan sensasi gaming yang lebih mendalam dengan
+                feedback haptic dan trigger adaptif.Jelajahi dunia gaming baru
+                dengan PS5!
+              </p>
+            </div>
+            <div class="flex space-x-4">
+              <div class="text-yellow-300">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+              </div>
+
+              <span><a href="">71 Review</a></span>
+            </div>
+            <p class="text-gray-800 text-lg font-semibold mb-4">
+              Harga: Rp. 8.999.000
+            </p>
+
+            <div class="flex items-center mb-4">
+              <label for="quantity" class="mr-2">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                class="py-2 px-3 border border-gray-300 rounded-md w-16 text-center focus:outline-cyan-300"
+              />
+            </div>
+
+            <div class="flex space-x-4">
+              <button
+                class="flex-1 outline hover:bg-cyan-500 hover:text-white text-cyan-500 font-bold py-2 px-4 rounded shadow-md"
+              >
+                Tambah ke Keranjang
+              </button>
+
+              <button
+                class="flex-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded shadow-md"
+              >
+                Beli Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Produk Serupa Section -->
+      <section class="my-8 mx-auto max-w-6xl p-6">
+        <h2 class="text-2xl font-bold mb-4 text-center">Produk Serupa</h2>
+        <div class="grid grid-cols-3 gap-8">
+          <!-- Produk Serupa 1 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4"
+              src="asset/produk/produk7.jpg"
+              alt="Xbox Series X"
+            />
+            <h3 class="text-lg font-semibold mb-2">Xbox Series X</h3>
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 6.700.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+          <!-- Produk Serupa 2 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4"
+              src="asset/produk/produk4.jpg"
+              alt="Nintendo switch"
+            />
+            <h3 class="text-lg font-semibold mb-2">Nintendo switch</h3>
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 5.000.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+          <!-- Produk Serupa 3 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4"
+              src="asset/produk/produk8.jpg"
+              alt="Ps 4"
+            />
+            <h3 class="text-lg font-semibold mb-2">Playstation 4</h3>
+
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+              <span>&#9734;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 4.000.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-600 text-white py-12">
+      <div class="max-w-6xl mx-auto flex flex-wrap justify-center">
+        <!-- Footer Logo and Social Icons -->
+        <div class="w-1/4 px-4 mb-0">
+          <div class="footer-logo">
+            <img src="asset/logowebtugas.svg" alt="Logo" class="h-12" />
+          </div>
+          <div class="social-icons mt-4">
+            <a href="#" class="text-gray-400 hover:text-white mr-4"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white mr-4"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white mr-4"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-white"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+          </div>
+          <div class="copyright mt-4">&copy; 2024 Belanja aja</div>
+        </div>
+
+        <!-- Footer Get to Know us -->
+        <div class="w-1/4 px-4">
+          <h4 class="text-xl font-bold mb-4">Get to Know Us</h4>
+          <ul class="list-footer">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">News & Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer Orders -->
+        <div class="w-1/4 px-4">
+          <h4 class="text-xl font-bold mb-4">Orders & Return</h4>
+          <ul class="list-footer">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white"
+                >Return & Exchange</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Track Order</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Footer Contact -->
+        <div class="w-1/4 px-4">
+          <h4 class="text-xl font-bold mb-4">Contact</h4>
+          <ul class="list-footer">
+            <li><i class="fas fa-phone text-gray-400"></i> +62 123456789</li>
+            <li>
+              <i class="fas fa-envelope text-gray-400"></i> belanja@aja.com
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt text-gray-400"></i> Jalan buntu
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
