@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+   
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+      </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {        
+        theme: {
+          extend: {
+            fontFamily: {
+        roboto: ['Roboto Mono'],
+        nunito: ['Nunito']
+      }
+
+          }
+        },
+        variants: {
+          extend: {
+            display: ["group-focus"],
+            opacity: ["group-focus"],
+            inset: ["group-focus"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="bg-white shadow-md p-4 fixed top-0 left-0 w-full z-10">
+      <div class="flex items-center justify-between md:justify-around">
+        <img
+          class="h-10 w-auto cursor-pointer"
+          src="asset/logowebtugas.svg"
+          alt="logo"
+        />
+
+        <!-- button hamburger untuk di mobile -->
+        <button
+        class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-gray-200 group"
+      >
+        <i class="fa-solid fa-bars"></i>
+        <div
+          class="absolute top-0 -right-full h-screen w-8/12 bg-white border opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-300"
+        >
+          <ul
+            class="flex flex-col items-center w-full text-base cursor-ponter pt-10"
+          >
+            <li class="hover:bg-gray-200 py-4 px-6 w-full transition duration-150 ease-out hover:ease-in">Home</li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full transition duration-150 ease-out hover:ease-in">Category</li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full transition duration-150 ease-out hover:ease-in">About Us</li>
+            <li class="hover:bg-gray-200 py-4 px-6 w-full transition duration-150 ease-out hover:ease-in">Contact</li>
+            <li><i class="fas fa-search text-gray-800 hover:bg-gray-200 cursor-pointer py-4 px-6 w-full transition duration-150 ease-out hover:ease-in"></i></li>
+            <li><i class="fas fa-shopping-cart text-gray-800 hover:bg-gray-200 cursor-pointer py-4 px-6 w-full transition duration-150 ease-out hover:ease-in"></i></li>
+            <li><i class="fas fa-user text-gray-800 hover:bg-gray-200 cursor-pointer py-4 px-6 w-full transition duration-150 ease-out hover:ease-in"></i></li>
+          </ul>
+        </div>
+      </button>
+
+         <!-- Navigation Menu (desktop) -->
+    <nav class="hidden md:flex items-center space-x-4 font-[Roboto]">
+      <a href="#" class="text-gray-800 hover:text-cyan-600 transition duration-150 ease-out hover:ease-in">Home</a>
+      <a href="#" class="text-gray-800 hover:text-cyan-600 transition duration-150 ease-out hover:ease-in">Category</a>
+      <a href="#" class="text-gray-800 hover:text-cyan-600 transition duration-150 ease-out hover:ease-in">About Us</a>
+      <a href="#" class="text-gray-800 hover:text-cyan-600 transition duration-150 ease-out hover:ease-in">Contact</a>
+    </nav>
+
+    <!-- Icons (desktop) -->
+    <div class="hidden md:flex items-center space-x-4 transition duration-150 ease-out hover:ease-in">
+      <i class="fas fa-search text-gray-800 hover:text-cyan-600 cursor-pointer transition duration-150 ease-out hover:ease-in"></i>
+      <i class="fas fa-shopping-cart text-gray-800 hover:text-cyan-600 cursor-pointer transition duration-150 ease-out hover:ease-in"></i>
+      <i class="fas fa-user text-gray-800 hover:text-cyan-600 cursor-pointer transition duration-150 ease-out hover:ease-in"></i>
+    </div>
+  </div>
+
+       
+      </div>
+    </header>
+    <main class="mt-16">
+      <!-- Detail Produk Section -->
+      <section class="my-8 mx-auto max-w-7xl p-6 md:shadow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- Nama produk di mobile version -->
+          <div class=" md:hidden"><h2 class="  text-base md:hidden font-bold mb-4 font-[Oswald]">
+            Produk Elektronik
+          </h2>
+          
+          <h3 class="  text-xl md:hidden font-bold mb-4 font-[Oswald]">
+            Playstation 5
+          </h3>
+          <div class="flex space-x-4  md:hidden ">
+            <div class="text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+            </div>
+
+            <span><a href="">71 Review</a></span>
+          </div>
+        </div>
+          
+          
+          <!-- Gambar Utama Produk (di kiri) -->
+          <div>
+            <img
+              class="w-full mb-4"
+              src="asset/produk/produk2.jpg"
+              alt="Gambar ps5 utama"
+            />
+            <!-- Tiga Gambar Kecil (di bawah gambar utama) -->
+            <div class="grid grid-cols-3 gap-4 mt-8">
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.1.jpg"
+                alt="Gambar ps5 kecil 1"
+              />
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.2.jpg"
+                alt="Gambar ps5 kecil 2"
+              />
+              <img
+                class="aspect-square"
+                src="asset/produk/produk2.3.jpg"
+                alt="Gambar ps5 kecil 3"
+              />
+            </div>
+          </div>
+      
+          <!-- Detail Teks Produk (di kanan) -->
+          <div class="h-full flex flex-col justify-between">
+            <h2 class=" hidden md:block  text-xl md:text-xl font-bold mb-4 font-roboto">
+              Produk Elektronik
+            </h2>
+            <div>
+              <h3 class=" hidden md:block text-xl md:text-2xl font-bold mb-4 font-roboto">
+                Playstation 5
+              </h3>
+              
+              <h4 class="text-base md:text-lg font-bold mb-4 font-roboto">Detail :</h4>
+              <p class="text-gray-700 text-sm md:text-base mb-4 font-nunito">
+                PS5 adalah konsol game generasi terbaru yang menawarkan
+                pengalaman gaming terdepan. Dibuat oleh Sony, PS5 memiliki
+                kekuatan grafis dan performa yang luar biasa, menjadikannya
+                pilihan utama para gamer. Dilengkapi dengan teknologi canggih
+                seperti ray tracing dan SSD ultra cepat, PS5 menghadirkan
+                gameplay yang halus dan realistis. Kontroler DualSense yang
+                inovatif memberikan sensasi gaming yang lebih mendalam dengan
+                feedback haptic dan trigger adaptif. Jelajahi dunia gaming baru
+                dengan PS5!
+              </p>
+            </div>
+            <div class="space-x-4 md:my-4 hidden md:flex">
+              <div class="text-yellow-300">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                
+              </div>
+              <span><a href="">71 Review</a></span>
+             
+            </div>
+            <div class="flex items-center mb-4 hidden md:block">
+              <label for="quantity" class="mr-2 text-sm md:text-base">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                min="1"
+                value="1"
+                class="py-2 px-3 border border-gray-300 rounded-md w-16 md:w-24 text-center focus:outline-cyan-300"
+              />
+              
+            </div>
+            <label for="quantity" class="mr-2 text-sm md:text-base font-bold md:hidden">Quantity :</label>
+            <div class="flex justify-center items-center mt-4 mb-8 md:hidden ">
+              
+              <div class="flex items-center border border-gray-300 rounded-md w-24 text-center">
+                <!-- Tombol Kurang -->
+                <button class="w-1/3 h-full focus:outline-none">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <!-- Input Quantity -->
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="1"
+                  class="py-2 px-3 w-1/3 text-center bg-white focus:outline-none"
+                />
+                <!-- Tombol Tambah -->
+                <button class="w-1/3 h-full focus:outline-none">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+            <p class="text-gray-800 text-lg font-semibold mb-4">
+              Harga: Rp. 8.999.000
+            </p>
+            <div class="flex space-x-4">
+              <button
+                class="flex-1 outline hover:bg-cyan-500 hover:text-white text-cyan-500 font-bold py-2 px-4 rounded shadow-md transition duration-150 ease-out hover:ease-in text-sm md:text-base"
+              >
+                Tambah ke Keranjang
+              </button>
+              <button
+                class="flex-1 bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded shadow-md transition duration-150 ease-out hover:ease-in text-sm md:text-base"
+              >
+                Beli Sekarang
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Produk Serupa Section -->
+      <section class="my-8 mx-auto max-w-6xl p-6">
+        <h2 class="text-2xl font-bold mb-4 text-center font-roboto">Produk Serupa</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Produk Serupa 1 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4 w-full"
+              src="asset/produk/produk7.jpg"
+              alt="Xbox Series X"
+            />
+            <h3 class="text-lg font-semibold mb-2">Xbox Series X</h3>
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 6.700.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+      
+          <!-- Produk Serupa 2 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4 w-full"
+              src="asset/produk/produk4.jpg"
+              alt="Nintendo Switch"
+            />
+            <h3 class="text-lg font-semibold mb-2">Nintendo Switch</h3>
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 5.000.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+      
+          <!-- Produk Serupa 3 -->
+          <div class="border border-gray-300 p-4 rounded">
+            <img
+              class="aspect-square mb-4 w-full"
+              src="asset/produk/produk8.jpg"
+              alt="Playstation 4"
+            />
+            <h3 class="text-lg font-semibold mb-2">Playstation 4</h3>
+            <div class="flex space-x-2 text-yellow-300">
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9733;</span>
+              <span>&#9734;</span>
+              <span>&#9734;</span>
+            </div>
+            <p class="text-gray-700 mb-4">Rp. 4.000.000</p>
+            <a href="#" class="text-blue-600 hover:underline">Lihat Detail</a>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-600 text-white py-12">
+      <div class="w-3/4   flex flex-wrap mx-auto  items-center ">
+    
+        <!-- Footer Logo and Social Icons -->
+        <div class="w-full md:w-1/4 mb-8 md:mb-0  px-4">
+          <div class="footer-logo">
+            <img src="asset/logowebtugas-w.svg" alt="Logo" class="h-12" />
+          </div>
+          <div class="social-icons mt-4">
+            <a href="#" class="text-gray-400 hover:text-white mr-4">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white mr-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white mr-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+          <div class="copyright mt-4">&copy; 2024 Belanja aja</div>
+        </div>
+    
+        <!-- Footer Get to Know Us -->
+        <div class="w-full md:w-1/4  mb-8 md:mb-0 px-4">
+          <h4 class="text-xl font-bold mb-4">Get to Know Us</h4>
+          <ul >
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">News & Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Careers</a>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Footer Orders -->
+        <div class="w-full md:w-1/4 mb-8 md:mb-0 px-4">
+          <h4 class="text-xl font-bold mb-4">Orders & Return</h4>
+          <ul >
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Shipping & Delivery</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Return & Exchange</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-white">Track Order</a>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- Footer Contact -->
+        <div class="w-full md:w-1/4  mb-8 md:mb-0 px-4">
+          <h4 class="text-xl font-bold mb-4">Contact</h4>
+          <ul >
+            <li><i class="fas fa-phone text-gray-400"></i> +62 123456789</li>
+            <li><i class="fas fa-envelope text-gray-400"></i> belanja@aja.com</li>
+            <li><i class="fas fa-map-marker-alt text-gray-400"></i> Jalan buntu</li>
+          </ul>
+        </div>
+    
+      </div>
+    </footer>
+    
+  </body>
+</html>
