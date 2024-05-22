@@ -21,8 +21,8 @@ function FeaturedProducts({ products }) {
                 className="w-full h-sm aspect-square rounded-md mb-4"
               />
               {/* Tombol produk */}
-              <div className="justify-evenly flex items-center">
-                <button className=" bg-blue-500 text-white px-2 py-1 rounded-md hover:bg-blue-600">
+              <div className="justify-evenly flex flex-wrap gap-2 items-center">
+                <button className="  text-nowrap bg-blue-500 text-white px-2 py-1 rounded-md hover:bg-blue-600">
                   Add to Cart
                 </button>
                 <div className="flex space-x-2">
