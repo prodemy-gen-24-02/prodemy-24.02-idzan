@@ -12,7 +12,7 @@ function ProductDetail() {
   if (!product) {
     return (
       <Layout>
-        <div className="pt-20  p-6  items-center text-center">
+        <div className="pt-20 pb-20  p-6  items-center text-center">
           <h2 className="text-2xl font-bold mb-4 text-center font-roboto">
             Produk Tidak Ditemukan
           </h2>
