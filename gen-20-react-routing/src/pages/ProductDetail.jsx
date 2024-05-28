@@ -9,31 +9,31 @@ function ProductDetail() {
   const { id } = useParams();
   const product = DataProduct.find((prod) => prod.id === parseInt(id));
 
-  // if (!product) {
-  //   return (
-  //     <Layout>
-  //       <div className="pt-20  w-full border  p-6  items-center text-center">
-  //         <h2 className="text-2xl font-bold mb-4 text-center font-roboto">
-  //           Produk Tidak Ditemukan
-  //         </h2>
+  if (!product) {
+    return (
+      <Layout>
+        <div className="pt-20  p-6  items-center text-center">
+          <h2 className="text-2xl font-bold mb-4 text-center font-roboto">
+            Produk Tidak Ditemukan
+          </h2>
 
-  //         <dotlottie-player
-  //           src="https://lottie.host/c71118ee-d86e-4d9f-8bf4-80830a6a5ca9/DHxUGxa19V.json"
-  //           background="transparent"
-  //           speed="1"
-  //           style={{ width: "300px", height: "300px", margin: "0 auto" }}
-  //           loop
-  //           autoplay
-  //         ></dotlottie-player>
+          <dotlottie-player
+            src="https://lottie.host/c71118ee-d86e-4d9f-8bf4-80830a6a5ca9/DHxUGxa19V.json"
+            background="transparent"
+            speed="1"
+            style={{ width: "300px", height: "300px", margin: "0 auto" }}
+            loop
+            autoplay
+          ></dotlottie-player>
 
-  //         <p className="text-gray-700 mt-4">
-  //           Maaf, produk yang Anda cari tidak ditemukan. Silakan cek kembali
-  //           atau lihat produk lainnya yang mungkin menarik bagi Anda.
-  //         </p>
-  //       </div>
-  //     </Layout>
-  //   );
-  // }
+          <p className="text-gray-700 mt-4">
+            Maaf, produk yang Anda cari tidak ditemukan. Silakan cek kembali
+            atau lihat produk lainnya yang mungkin menarik bagi Anda.
+          </p>
+        </div>
+      </Layout>
+    );
+  }
 
   const relatedProducts = DataProduct.filter(
     (prod) => prod.category === product.category && prod.id !== product.id
