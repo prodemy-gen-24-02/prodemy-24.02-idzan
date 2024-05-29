@@ -25,38 +25,45 @@ const getProductById = (id) => {
 };
 
 // Method Product
-const createProduct = async (newProduct) => {
-  try {
-    const response = await axios.post(productApiURL + '/add', newProduct, {
+const createProduct = (newProduct) => {
+  axios
+    .post(productApiURL + '/add', newProduct, {
       headers: {
         'Content-type': 'application/json'
       }
+    })
+    .then((response) => {
+      console.log("Created Product: ", response.data);
+    })
+    .catch((error) => {
+      console.error("Error creating product:", error);
     });
-    console.log("Created Product: ", response.data);
-  } catch (error) {
-    console.error("Error creating product:", error);
-  }
 };
 
 
-const updateProduct = async (id, updatedProduct) => {
-  try {
-    const response = await axios.put(productApiURL + "/" + id, updatedProduct);
-    console.log("Updated Product: ", response.data);
-  } catch (error) {
-    console.error("Error updating product:", error);
-  }
+const updateProduct = (id, updatedProduct) => {
+  axios
+    .put(productApiURL + "/" + id, updatedProduct)
+    .then((response) => {
+      console.log("Updated Product: ", response.data);
+    })
+    .catch((error) => {
+      console.error("Error updating product:", error);
+    });
 };
 
 
-const deleteProduct = async (id) => {
-  try {
-    const response = await axios.delete(productApiURL + "/" + id);
-    console.log("Deleted Product: ", response.data);
-  } catch (error) {
-    console.error("Error deleting product:", error);
-  }
+const deleteProduct = (id) => {
+  axios
+    .delete(productApiURL + "/" + id)
+    .then((response) => {
+      console.log("Deleted Product: ", response.data);
+    })
+    .catch((error) => {
+      console.error("Error deleting product:", error);
+    });
 };
+
 
 
 // Method User
