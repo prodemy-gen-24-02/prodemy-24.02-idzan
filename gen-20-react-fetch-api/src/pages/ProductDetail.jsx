@@ -15,7 +15,7 @@ function ProductDetail() {
   const [relatedProductsError, setRelatedProductsError] = useState();
 
   useEffect(() => {
-    // Fungsi untuk mendapatkan produk berdasarkan ID menggunakan Axios
+    // Fungsi untuk mendapatkan produk berdasarkan ID
     const getProductById = async () => {
       try {
         const response = await axios.get(
@@ -24,30 +24,26 @@ function ProductDetail() {
         setProduct(response.data);
       } catch (error) {
         if (error.response && error.response.status === 404) {
-          // Tangani kesalahan jika produk tidak ditemukan
           setProductError(new Error("Produk tidak ditemukan"));
         } else {
-          // Tangani kesalahan umum
           setProductError(error);
           console.log(error);
         }
       }
     };
-    // Fungsi untuk mendapatkan produk terkait berdasarkan kategori produk menggunakan Axios
+    // Fungsi untuk mendapatkan produk terkait berdasarkan kategori produk
     const getRelatedProducts = async () => {
       try {
         const response = await axios.get(
           `http://localhost:3000/products?category=${product.category}`
         );
-        // Filter produk terkait untuk menghilangkan produk yang memiliki ID yang sama dengan produk yang sedang ditampilkan
+        // Filter produk agar tidak tampil produk yang sedang ditampilkan detailnya
         const filteredProducts = response.data.filter((prod) => prod.id !== id);
         setRelatedProducts(filteredProducts);
       } catch (error) {
         setRelatedProductsError(error);
       }
     };
-
-    // Panggil fungsi untuk mendapatkan produk dan produk terkait
 
     setTimeout(() => {
       getProductById();
@@ -56,7 +52,7 @@ function ProductDetail() {
     if (product) {
       getRelatedProducts();
     }
-  }, [id, product]); // Pastikan untuk menyertakan `product` sebagai dependensi useEffect
+  }, [id, product]);
 
   if (productError && productError.message === "Produk tidak ditemukan") {
     return (
@@ -120,7 +116,6 @@ function ProductDetail() {
   return (
     <Layout>
       <ProductSection product={product} />
-      {/* <ProductSectionSkeleton></ProductSectionSkeleton> */}
       {relatedProducts.length > 0 ? (
         <ProdukSerupa produk={relatedProducts} />
       ) : (
