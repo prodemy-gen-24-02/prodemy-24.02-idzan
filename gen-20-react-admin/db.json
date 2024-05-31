@@ -1,0 +1,162 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Vivobook 14X a(M1403)",
+      "images": [
+        "/assets/produk/produk1.png",
+        "/assets/produk/produk1.1.jpg",
+        "/assets/produk/produk1.2.jpeg",
+        "/assets/produk/produk1.3.png"
+      ],
+      "alt": "Laptop Vivobook 14x",
+      "price": "Rp. 7.999.000",
+      "rating": 4,
+      "description": "Vivobook 14X adalah laptop yang ideal untuk produktivitas dan hiburan. Dengan performa tinggi dan desain yang stylish, Vivobook 14X siap mendukung aktivitas sehari-hari Anda.",
+      "category": "Komputer"
+    },
+    {
+      "id": 2,
+      "name": "PlayStation 5 (PS 5)",
+      "images": [
+        "/assets/produk/produk2.jpg",
+        "/assets/produk/produk2.1.jpg",
+        "/assets/produk/produk2.2.jpg",
+        "/assets/produk/produk2.3.jpg"
+      ],
+      "alt": "PS 5",
+      "price": "Rp. 8.999.000",
+      "rating": 5,
+      "description": "PS5 adalah konsol game generasi terbaru yang menawarkan pengalaman gaming terdepan. Dibuat oleh Sony, PS5 memiliki kekuatan grafis dan performa yang luar biasa, menjadikannya pilihan utama para gamer.",
+      "category": "Video games"
+    },
+    {
+      "id": 3,
+      "name": "Infinix Note 40 Pro 5G 8+256GB",
+      "images": [
+        "/assets/produk/produk3.png",
+        "/assets/produk/produk3.1.jpg",
+        "/assets/produk/produk3.2.png",
+        "/assets/produk/produk3.3.jpg"
+      ],
+      "alt": "Hp Infinix Note 40",
+      "price": "Rp. 3.700.000",
+      "rating": 4,
+      "description": "Infinix Note 40 Pro adalah smartphone canggih dengan kapasitas penyimpanan 8+256GB. Dengan teknologi 5G, Anda dapat menikmati kecepatan internet yang luar biasa.",
+      "category": "Smartphone"
+    },
+    {
+      "id": 4,
+      "name": "Nintendo Switch",
+      "images": [
+        "/assets/produk/produk4.png",
+        "/assets/produk/produk4.1.jpg",
+        "/assets/produk/produk4.2.jpg",
+        "/assets/produk/produk4.3.jpg"
+      ],
+      "alt": "Nintendo Switch",
+      "price": "Rp. 5.000.000",
+      "rating": 4,
+      "description": "Nintendo Switch adalah konsol game revolusioner yang dapat digunakan baik sebagai perangkat genggam maupun terhubung ke TV. Nikmati pengalaman bermain yang seru dan fleksibel.",
+      "category": "Video games"
+    },
+    {
+      "id": 5,
+      "name": "Adjustable Dumbbell Set",
+      "images": [
+        "/assets/produk/produk5.png",
+        "/assets/produk/produk5.1.jpg",
+        "/assets/produk/produk5.2.jpg",
+        "/assets/produk/produk5.3.jpg"
+      ],
+      "alt": "Dumbell fleksibel",
+      "price": "Rp. 7.800.000",
+      "rating": 4,
+      "description": "Set Dumbbell Adjustable memungkinkan Anda untuk menyesuaikan berat dengan mudah, menjadikannya pilihan yang sempurna untuk latihan kekuatan di rumah.",
+      "category": "Olahraga"
+    },
+    {
+      "id": 6,
+      "name": "Smart Watch v2",
+      "images": [
+        "/assets/produk/produk6.png",
+        "/assets/produk/produk6.1.jpg",
+        "/assets/produk/produk6.2.jpg",
+        "/assets/produk/produk6.3.jpg"
+      ],
+      "alt": "Smart watch v2",
+      "price": "Rp. 900.000",
+      "rating": 3,
+      "description": "Smart Watch v2 adalah jam tangan pintar yang dilengkapi dengan berbagai fitur kesehatan dan kebugaran. Tetap terhubung dan pantau kesehatan Anda dengan mudah.",
+      "category": "Smartwatch"
+    },
+    {
+      "id": 7,
+      "name": "Xbox Series X",
+      "images": [
+        "/assets/produk/produk7.jpg",
+        "/assets/produk/produk7.1.jpg",
+        "/assets/produk/produk7.2.jpg",
+        "/assets/produk/produk7.3.jpg"
+      ],
+      "alt": "Xbox Series X",
+      "price": "Rp. 6.700.000",
+      "rating": 5,
+      "description": "Xbox Series X adalah konsol game generasi terbaru dari Microsoft yang menawarkan pengalaman gaming terbaik dengan grafis memukau dan performa tinggi.",
+      "category": "Video games"
+    },
+    {
+      "id": 8,
+      "name": "Playstation 4",
+      "images": [
+        "/assets/produk/produk8.jpg",
+        "/assets/produk/produk8.1.jpg",
+        "/assets/produk/produk8.2.jpg",
+        "/assets/produk/produk8.3.jpg"
+      ],
+      "alt": "Playstation 4",
+      "price": "Rp. 4.000.000",
+      "rating": 3,
+      "description": "Playstation 4 adalah konsol game populer dari Sony yang menawarkan berbagai game eksklusif dan pengalaman gaming yang imersif.",
+      "category": "Video games"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "imgSrc": "/assets/icon/icon-computer.png",
+      "alt": "Komputer",
+      "text": "Komputer"
+    },
+    {
+      "id": 2,
+      "imgSrc": "/assets/icon/icon-smartphone.png",
+      "alt": "Smartphone",
+      "text": "Smartphone"
+    },
+    {
+      "id": 3,
+      "imgSrc": "/assets/icon/icon-camera.png",
+      "alt": "Kamera",
+      "text": "Kamera"
+    },
+    {
+      "id": 4,
+      "imgSrc": "/assets/icon/icon-watch.png",
+      "alt": "Smartwatch",
+      "text": "Smartwatch"
+    },
+    {
+      "id": 5,
+      "imgSrc": "/assets/icon/icon-game.png",
+      "alt": "Game console",
+      "text": "Video games"
+    },
+    {
+      "id": 6,
+      "imgSrc": "/assets/icon/icon-sports.png",
+      "alt": "Alat olahraga",
+      "text": "Olahraga"
+    }
+  ]
+}
