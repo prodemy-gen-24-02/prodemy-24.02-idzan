@@ -40,7 +40,7 @@ const EditCategoryForm = ({ onSubmit }) => {
       .catch((error) => {
         console.error("Error fetching category:", error);
       });
-  }, [id, setValue]);
+  }, [id]);
 
   const handleImageChange = (e) => {
     const url = e.target.value;

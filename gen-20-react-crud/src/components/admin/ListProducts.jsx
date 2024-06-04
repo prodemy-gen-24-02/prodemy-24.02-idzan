@@ -78,12 +78,12 @@ const ListProducts = () => {
         ),
       },
       {
-        accessorKey: "id",
+      
         header: "Aksi",
         enableSorting: false,
         cell: (item) => (
           <div className="flex space-x-2 justify-center">
-            <Link to={`/admin/product/edit/${item.getValue()}`}>
+            <Link to={`/admin/product/edit/${item.row.getValue("id")}`}>
               <button className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded flex items-center">
                 <BsPencil className="md:hidden" />
                 <span className="hidden md:inline">Edit</span>
@@ -91,7 +91,7 @@ const ListProducts = () => {
             </Link>
             <button
               className="bg-red-500 hover:bg-red-600 text-white py-1 px-2 rounded flex items-center"
-              onClick={() => onClickDelete(item.getValue())}
+              onClick={() => onClickDelete(item.row.getValue("id"))}
             >
               <BsTrash className="md:hidden" />
               <span className="hidden md:inline">Hapus</span>

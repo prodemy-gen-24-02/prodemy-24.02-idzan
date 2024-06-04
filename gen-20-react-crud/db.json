@@ -10,7 +10,7 @@
       "description": "Vivobook 14X adalah laptop yang ideal untuk produktivitas dan hiburan. Dengan performa tinggi dan desain yang stylish, Vivobook 14X siap mendukung aktivitas sehari-hari Anda.",
       "price": 7999000,
       "category": "Komputer",
-      "name": "Vivobook 14X a(M1403)",
+      "name": "Vivobook 14X a(M1403) ",
       "id": "1"
     },
     {
@@ -100,7 +100,7 @@
   ],
   "categories": [
     {
-      "namaKategori": "Komputer",
+      "namaKategori": "Komputer ",
       "imgSrc": "/assets/icon/icon-computer.png",
       "id": "1"
     },
