@@ -1,12 +1,12 @@
 import axios from "axios";
 import AdminLayout from "../../Layout/AdminLayout";
-
 import { mutate } from "swr";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import EditProductForm from "../../components/admin/EditProductForm";
 
 const AdminEditProduct = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const handleSubmit = (data) => {
     axios
@@ -14,9 +14,10 @@ const AdminEditProduct = () => {
       .then(() => {
         mutate();
         alert("Data berhasil di edit");
+        navigate("/admin/product"); // Corrected to use navigate function
       })
       .catch((error) => {
-        alert("Error mengedit category:", error);
+        alert("Error mengedit product:", error);
       });
   };
 
