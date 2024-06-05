@@ -9,7 +9,7 @@ import {
 import { BsPencil, BsTrash } from "react-icons/bs";
 import { BiSort } from "react-icons/bi";
 import useSWR, { mutate } from "swr";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo,  } from "react";
 import { Link } from "react-router-dom";
 
 const getCategories = (url) => axios.get(url).then((res) => res.data);
@@ -31,24 +31,20 @@ const ListCategories = () => {
     );
   };
 
-  const onClickDelete = useCallback(
-    (id) => {
-      const categoryToDelete = categories?.find(
-        (category) => category.id === id
-      );
-      // Konfirmasi alert
-      const confirmDelete = window.confirm(
-        `Apakah Anda yakin ingin menghapus kategori "${categoryToDelete?.namaKategori}" ini?`
-      );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  function onClickDelete(id) {
+    const categoryToDelete = categories?.find((category) => category.id === id);
+    // Konfirmasi alert
+    const confirmDelete = window.confirm(
+      `Apakah Anda yakin ingin menghapus kategori "${categoryToDelete?.namaKategori}" ini?`
+    );
 
-      if (confirmDelete) {
-        axios
-          .delete(`http://localhost:3000/categories/${id}`)
-          .then(() => mutate());
-      }
-    },
-    [categories]
-  );
+    if (confirmDelete) {
+      axios
+        .delete(`http://localhost:3000/categories/${id}`)
+        .then(() => mutate("http://localhost:3000/categories"));
+    }
+  }
 
   const columns = useMemo(
     () => [

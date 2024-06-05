@@ -9,7 +9,7 @@ import {
 import { BsPencil, BsTrash } from "react-icons/bs";
 import { BiSort, BiFilter } from "react-icons/bi";
 import useSWR, { mutate } from "swr";
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { FormatRupiah } from "../../utils/FormatRupiah";
 import { Link } from "react-router-dom";
 import Popover from "../../utils/Popover";
@@ -34,8 +34,9 @@ const ListProducts = () => {
     );
   };
 
-  const onClickDelete = useCallback(
-    (id) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  function onClickDelete
+    (id) {
       const productToDelete = products?.find((product) => product.id === id);
 
       const confirmDelete = window.confirm(
@@ -45,11 +46,9 @@ const ListProducts = () => {
       if (confirmDelete) {
         axios
           .delete(`http://localhost:3000/products/${id}`)
-          .then(() => mutate());
+          .then(() => mutate("http://localhost:3000/products"));
       }
-    },
-    [products]
-  );
+    }
 
   const columns = useMemo(
     () => [
