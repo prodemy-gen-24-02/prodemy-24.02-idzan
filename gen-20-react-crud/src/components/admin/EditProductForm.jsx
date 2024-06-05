@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import axios from "axios";
 import useSWR from "swr";
+import { useParams } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup
@@ -24,42 +24,54 @@ const schema = yup.object().shape({
     .max(4, "Tidak boleh lebih dari 4 gambar"),
 });
 
+const getCategories = (url) => axios.get(url).then((res) => res.data);
+const getProduct = (url) => axios.get(url).then((res) => res.data);
+
 const EditProductForm = ({ onSubmit }) => {
   const { id } = useParams();
-  const getProduct = (url) => axios.get(url).then((res) => res.data);
-  const { data: product, error } = useSWR(
+  const { data: product, error: productError } = useSWR(
     `http://localhost:3000/products/${id}`,
     getProduct
+  );
+  const { data: categories, error: categoriesError } = useSWR(
+    "http://localhost:3000/categories",
+    getCategories
   );
 
   const {
     register,
     handleSubmit,
-
+   
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const submitForm = (data) => {
-    onSubmit(data);
-  };
+  if (categoriesError || productError)
+    return <p>Error fetching data</p>;
+  if (!categories || !product)
+    return <p>Loading...</p>;
 
-  if (error) return <p>Error fetching product</p>;
-  if (!product) return <p>Loading...</p>;
+  const defaultValues = {
+    name: product.name,
+    category: product.category,
+    price: product.price,
+    description: product.description,
+    images: product.images,
+  };
 
   return (
     <div className="mx-4">
       <h2 className="text-2xl">Edit Produk</h2>
       <form
-        onSubmit={handleSubmit(submitForm)}
+        onSubmit={handleSubmit(onSubmit)}
         className="max-w-md mx-auto p-4"
       >
         <div className="mb-4">
           <label className="block mb-1">Name:</label>
           <input
+            defaultValue={defaultValues.name}
             {...register("name")}
-            defaultValue={product.name}
             className={`w-full px-4 py-2 rounded-md border ${
               errors.name ? "border-red-500" : "border-gray-300"
             }`}
@@ -68,21 +80,27 @@ const EditProductForm = ({ onSubmit }) => {
         </div>
         <div className="mb-4">
           <label className="block mb-1">Category:</label>
-          <input
+          <select
+            defaultValue={defaultValues.category}
             {...register("category")}
-            defaultValue={product.category}
             className={`w-full px-4 py-2 rounded-md border ${
               errors.category ? "border-red-500" : "border-gray-300"
             }`}
-          />
+          >
+            {categories.map((category) => (
+              <option key={category.id} value={category.namaKategori}>
+                {category.namaKategori}
+              </option>
+            ))}
+          </select>
           <p className="text-red-500 mt-1">{errors.category?.message}</p>
         </div>
         <div className="mb-4">
           <label className="block mb-1">Price:</label>
           <input
+            defaultValue={defaultValues.price}
             {...register("price")}
             type="number"
-            defaultValue={product.price}
             className={`w-full px-4 py-2 rounded-md border ${
               errors.price ? "border-red-500" : "border-gray-300"
             }`}
@@ -92,8 +110,8 @@ const EditProductForm = ({ onSubmit }) => {
         <div className="mb-4">
           <label className="block mb-1">Description:</label>
           <textarea
+            defaultValue={defaultValues.description}
             {...register("description")}
-            defaultValue={product.description}
             className={`w-full px-4 py-2 rounded-md border ${
               errors.description ? "border-red-500" : "border-gray-300"
             }`}
@@ -102,7 +120,7 @@ const EditProductForm = ({ onSubmit }) => {
         </div>
         <div className="mb-4">
           <label className="block mb-1">Images URLs:</label>
-          {product.images.map((imageUrl, index) => (
+          {defaultValues.images.map((imageUrl, index) => (
             <div key={index} className="mb-2">
               <input
                 type="text"
