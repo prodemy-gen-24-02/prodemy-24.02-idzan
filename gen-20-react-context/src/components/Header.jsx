@@ -1,16 +1,16 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/logowebtugas.svg";
-import { CartContext } from "../context/CartContext"; // Import useCart
+import { CartContext } from "../context/CartContext";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const { cartItems } = useContext(CartContext);
+  const { getTotalQuantity } = useContext(CartContext);
 
   const handleCartClick = () => {
-    navigate("/cart"); // Arahkan ke halaman keranjang
+    navigate("/cart");
   };
 
   const toggleMobileMenu = () => {
@@ -102,9 +102,9 @@ function Header() {
               </li>
               <li className="relative">
                 <i className="fas fa-shopping-cart text-gray-700 hover:bg-gray-200 cursor-pointer py-4 px-6 w-full transition duration-150"></i>
-                {cartItems.length > 0 && (
+                {getTotalQuantity() > 0 && (
                   <span className="absolute top-0 right-0 mt-1 mr-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                    {cartItems.length}
+                    {getTotalQuantity()}
                   </span>
                 )}
               </li>
@@ -122,9 +122,9 @@ function Header() {
               onClick={handleCartClick}
               className="fas fa-shopping-cart text-gray-800 hover:text-cyan-600 cursor-pointer"
             ></i>
-            {cartItems.length > 0 && (
+            {getTotalQuantity() > 0 && (
               <span className="absolute -top-4 left-2 mt-1 mr-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                {cartItems.length}
+                {getTotalQuantity()}
               </span>
             )}
           </div>
