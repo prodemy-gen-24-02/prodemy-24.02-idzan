@@ -12,7 +12,7 @@ function FeaturedProducts({ products }) {
   };
 
   const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
+    dispatch(addToCart({ ...product, quantity: 1 }));
   };
 
   return (

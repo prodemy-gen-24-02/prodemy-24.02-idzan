@@ -15,7 +15,11 @@ const cartSlice = createSlice({
       if (existingItem) {
         existingItem.quantity += action.payload.quantity || 1;
       } else {
-        state.cartItems.push({ ...action.payload, quantity: 1 });
+        // eror yg quantity sudah diperbaiki
+        state.cartItems.push({
+          ...action.payload,
+          quantity: action.payload.quantity,
+        });
       }
     },
     removeFromCart(state, action) {
