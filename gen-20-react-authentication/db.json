@@ -1,0 +1,149 @@
+{
+  "products": [
+    {
+      "images": [
+        "/assets/produk/produk1.png",
+        "/assets/produk/produk1.1.jpg",
+        "/assets/produk/produk1.2.jpeg",
+        "/assets/produk/produk1.3.png"
+      ],
+      "description": "Vivobook 14X adalah laptop yang ideal untuk produktivitas dan hiburan. Dengan performa tinggi dan desain yang stylish, Vivobook 14X siap mendukung aktivitas sehari-hari Anda.",
+      "price": 7999000,
+      "category": "Komputer",
+      "name": "Vivobook 14X a(M1403) ",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "PlayStation 5 (PS 5)",
+      "images": [
+        "/assets/produk/produk2.jpg",
+        "/assets/produk/produk2.1.jpg",
+        "/assets/produk/produk2.2.jpg",
+        "/assets/produk/produk2.3.jpg"
+      ],
+      "price": 8999000,
+      "rating": 5,
+      "description": "PS5 adalah konsol game generasi terbaru yang menawarkan pengalaman gaming terdepan. Dibuat oleh Sony, PS5 memiliki kekuatan grafis dan performa yang luar biasa, menjadikannya pilihan utama para gamer.",
+      "category": "Video games"
+    },
+    {
+      "id": "3",
+      "name": "Infinix Note 40 Pro 5G 8+256GB",
+      "images": [
+        "/assets/produk/produk3.png",
+        "/assets/produk/produk3.1.jpg",
+        "/assets/produk/produk3.2.png",
+        "/assets/produk/produk3.3.jpg"
+      ],
+      "price": 3700000,
+      "rating": 4,
+      "description": "Infinix Note 40 Pro adalah smartphone canggih dengan kapasitas penyimpanan 8+256GB. Dengan teknologi 5G, Anda dapat menikmati kecepatan internet yang luar biasa.",
+      "category": "Smartphone"
+    },
+    {
+      "id": "4",
+      "name": "Nintendo Switch",
+      "images": [
+        "/assets/produk/produk4.png",
+        "/assets/produk/produk4.1.jpg",
+        "/assets/produk/produk4.2.jpg",
+        "/assets/produk/produk4.3.jpg"
+      ],
+      "price": 5000000,
+      "rating": 4,
+      "description": "Nintendo Switch adalah konsol game revolusioner yang dapat digunakan baik sebagai perangkat genggam maupun terhubung ke TV. Nikmati pengalaman bermain yang seru dan fleksibel.",
+      "category": "Video games"
+    },
+    {
+      "id": "5",
+      "name": "Adjustable Dumbbell Set",
+      "images": [
+        "/assets/produk/produk5.png",
+        "/assets/produk/produk5.1.jpg",
+        "/assets/produk/produk5.2.jpg",
+        "/assets/produk/produk5.3.jpg"
+      ],
+      "price": 7800000,
+      "rating": 4,
+      "description": "Set Dumbbell Adjustable memungkinkan Anda untuk menyesuaikan berat dengan mudah, menjadikannya pilihan yang sempurna untuk latihan kekuatan di rumah.",
+      "category": "Olahraga"
+    },
+    {
+      "id": "6",
+      "name": "Smart Watch v2",
+      "images": [
+        "/assets/produk/produk6.png",
+        "/assets/produk/produk6.1.jpg",
+        "/assets/produk/produk6.2.jpg",
+        "/assets/produk/produk6.3.jpg"
+      ],
+      "price": 900000,
+      "rating": 3,
+      "description": "Smart Watch v2 adalah jam tangan pintar yang dilengkapi dengan berbagai fitur kesehatan dan kebugaran. Tetap terhubung dan pantau kesehatan Anda dengan mudah.",
+      "category": "Smartwatch"
+    },
+    {
+      "id": "7",
+      "name": "Xbox Series X",
+      "images": [
+        "/assets/produk/produk7.jpg",
+        "/assets/produk/produk7.1.jpg",
+        "/assets/produk/produk7.2.jpg",
+        "/assets/produk/produk7.3.jpg"
+      ],
+      "price": 6700000,
+      "rating": 5,
+      "description": "Xbox Series X adalah konsol game generasi terbaru dari Microsoft yang menawarkan pengalaman gaming terbaik dengan grafis memukau dan performa tinggi.",
+      "category": "Video games"
+    }
+  ],
+  "categories": [
+    {
+      "namaKategori": "Komputer ",
+      "imgSrc": "/assets/icon/icon-computer.png",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "imgSrc": "/assets/icon/icon-smartphone.png",
+      "namaKategori": "Smartphone"
+    },
+    {
+      "id": "3",
+      "imgSrc": "/assets/icon/icon-camera.png",
+      "namaKategori": "Kamera"
+    },
+    {
+      "id": "4",
+      "imgSrc": "/assets/icon/icon-watch.png",
+      "namaKategori": "Smartwatch"
+    },
+    {
+      "id": "5",
+      "imgSrc": "/assets/icon/icon-game.png",
+      "namaKategori": "Video games"
+    },
+    {
+      "id": "6",
+      "imgSrc": "/assets/icon/icon-sports.png",
+      "namaKategori": "Olahraga"
+    }
+  ],
+  "users": [
+    {
+      "email": "idzan@mail.com",
+      "password": "$2a$10$L6IfdAEBUs7ukudnCYis7.87QVusoDBunjy7WOOd45keg5tfEhRCC",
+      "name": "Idzan",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$3b8/yrzqlqtRQpL.iYEZy.Z0s5fS0ow.XVISPnXuY0GXNWcT/OQ8W",
+      "name": "admin1",
+      "role": "admin",
+      "id": 2
+    }
+  ]
+}
