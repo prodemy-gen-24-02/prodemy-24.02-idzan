@@ -1,19 +1,34 @@
 import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-function PrivateRoute({ children }) {
-  const { token } = useSelector((state) => state.auth);
-  return token ? children : <Navigate to="/login" />;
-}
-
-function AdminRoute({ children }) {
+function PrivateRoute({ allowedRoles }) {
   const { token, user } = useSelector((state) => state.auth);
-  return token && user.role === "admin" ? children : <Navigate to="/" />;
+
+  if (!token) {
+    return <Navigate to="/login" />;
+  }
+
+  if (!allowedRoles.includes(user.role)) {
+    return <Navigate to="/" />;
+  }
+
+  return <Outlet />;
 }
 
-function GuestRoute({ children }) {
-  const { token } = useSelector((state) => state.auth);
-  return !token ? children : <Navigate to="/" />;
+function AdminRoute() {
+  const { token, user } = useSelector((state) => state.auth);
+  return token && user.role === "admin" ? <Outlet /> : <Navigate to="/" />;
+}
+
+function GuestRoute() {
+  const { token, user } = useSelector((state) => state.auth);
+  return !token ? (
+    <Outlet />
+  ) : user?.role === "admin" ? (
+    <Navigate to="/admin/dashboard" />
+  ) : (
+    <Navigate to="/" />
+  );
 }
 
 export { PrivateRoute, AdminRoute, GuestRoute };
